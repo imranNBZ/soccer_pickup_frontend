@@ -28,7 +28,7 @@ function CreateGame() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3001/games", {
+      const res = await fetch("https://soccer-pickup-backend.onrender.com/games", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

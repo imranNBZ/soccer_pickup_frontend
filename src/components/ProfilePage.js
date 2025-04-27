@@ -8,7 +8,7 @@ function ProfilePage() {
 
   useEffect(() => {
     if (token && userId) {
-      fetch(`http://localhost:3001/users/${userId}`, {
+      fetch(`https://soccer-pickup-backend.onrender.com/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then((res) => res.json())

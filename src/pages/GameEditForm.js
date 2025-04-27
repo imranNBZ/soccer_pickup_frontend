@@ -24,7 +24,7 @@ function GameEditForm() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/games/${id}`)
+    fetch(`https://soccer-pickup-backend.onrender.com/games/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setFormData({
@@ -93,7 +93,7 @@ function GameEditForm() {
         [longitude, latitude] = geoData.features[0].center;
       }
 
-      const res = await fetch(`http://localhost:3001/games/${id}`, {
+      const res = await fetch(`https://soccer-pickup-backend.onrender.com/games/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

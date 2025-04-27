@@ -11,7 +11,7 @@ function Home() {
 
   useEffect(() => {
     if (token && userId) {
-      fetch(`http://localhost:3001/users/${userId}/rsvps`, {
+      fetch(`https://soccer-pickup-backend.onrender.com/users/${userId}/rsvps`, {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then((res) => {

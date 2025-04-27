@@ -21,7 +21,7 @@ function ProfileEdit() {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const res = await fetch(`http://localhost:3001/users/${userId}`, {
+        const res = await fetch(`https://soccer-pickup-backend.onrender.com/users/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -51,7 +51,7 @@ function ProfileEdit() {
       const payload = { ...formData };
       if (!payload.password) delete payload.password;
 
-      const res = await fetch(`http://localhost:3001/users/${userId}`, {
+      const res = await fetch(`https://soccer-pickup-backend.onrender.com/users/${userId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

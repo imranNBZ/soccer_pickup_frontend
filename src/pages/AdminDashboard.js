@@ -16,7 +16,7 @@ function AdminDashboard() {
       return;
     }
 
-    fetch("http://localhost:3001/admin/users", {
+    fetch("https://soccer-pickup-backend.onrender.com/admin/users", {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then((res) => res.json())
@@ -26,7 +26,7 @@ function AdminDashboard() {
 
   const handleBlock = async (userId) => {
     try {
-      const res = await fetch(`http://localhost:3001/admin/users/${userId}/block`, {
+      const res = await fetch(`https://soccer-pickup-backend.onrender.com/admin/users/${userId}/block`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -42,7 +42,7 @@ function AdminDashboard() {
 
   const handleUnblock = async (userId) => {
     try {
-      const res = await fetch(`http://localhost:3001/admin/users/${userId}/unblock`, {
+      const res = await fetch(`https://soccer-pickup-backend.onrender.com/admin/users/${userId}/unblock`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` }
       });

@@ -12,13 +12,13 @@ function GameList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3001/games")
+    fetch("https://soccer-pickup-backend.onrender.com/games")
       .then((res) => res.json())
       .then((data) => {
         setGames(data);
         return Promise.all(
           data.map((game) =>
-            fetch(`http://localhost:3001/games/${game.id}/rsvps`)
+            fetch(`https://soccer-pickup-backend.onrender.com/${game.id}/rsvps`)
               .then((res) => res.json())
               .then((users) => ({ gameId: game.id, users }))
           )
@@ -33,7 +33,7 @@ function GameList() {
       });
 
     if (token && userId) {
-      fetch(`http://localhost:3001/users/${userId}/rsvps`, {
+      fetch(`https://soccer-pickup-backend.onrender.com/users/${userId}/rsvps`, {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((res) => res.json())
@@ -51,7 +51,7 @@ function GameList() {
 
   const handleRSVP = async (gameId) => {
     try {
-      const res = await fetch(`http://localhost:3001/games/${gameId}/rsvp`, {
+      const res = await fetch(`https://soccer-pickup-backend.onrender.com/games/${gameId}/rsvp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function GameList() {
 
   const handleOptOut = async (gameId) => {
     try {
-      const res = await fetch(`http://localhost:3001/games/${gameId}/rsvp`, {
+      const res = await fetch(`https://soccer-pickup-backend.onrender.com/games/${gameId}/rsvp`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -88,7 +88,7 @@ function GameList() {
   const handleDelete = async (gameId) => {
     if (!window.confirm("Are you sure you want to delete this game?")) return;
     try {
-      const res = await fetch(`http://localhost:3001/games/${gameId}`, {
+      const res = await fetch(`https://soccer-pickup-backend.onrender.com/games/${gameId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -1,0 +1,24 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+
+.nav-link.active {
+  border-bottom: 2px solid #0d6efd;
+  font-weight: bold;
+}
+
+.alert {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: 90%;
+  max-width: 600px;
+}

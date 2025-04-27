@@ -4,7 +4,7 @@ function Home() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3001")
+    fetch("https://soccer-pickup-backend.onrender.com")
       .then((res) => res.text())
       .then((data) => setMessage(data))
       .catch((err) => console.error("API error:", err));

@@ -26,7 +26,7 @@ function Signup() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3001/users", {
+      const res = await fetch("https://soccer-pickup-backend.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)

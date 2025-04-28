@@ -1,4 +1,9 @@
+Go to the link below, and check out pick up games!
+https://soccer-pickup-frontend.onrender.com
+
+
 Pickup Soccer
+
 Pickup Soccer is a full-stack web application that lets users easily create and join local pickup soccer games. 🏆⚽
 
 Using Mapbox integration, users can create a game by setting the location on the map. The app validates the address to ensure it's accurate. Other players can browse upcoming games and RSVP to participate.
@@ -31,6 +36,7 @@ Hosting: (e.g., Render, Vercel, Netlify) (optional — you can add if you deploy
 
 Setup Instructions
 Clone the repository
+
 
 Install dependencies with npm install
 

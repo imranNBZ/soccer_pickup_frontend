@@ -32,7 +32,7 @@ Authentication: JWT (JSON Web Tokens), bcrypt
 
 Mapping & Geolocation: Mapbox API
 
-Hosting: (e.g., Render, Vercel, Netlify) (optional — you can add if you deployed it)
+Hosting: Render
 
 Setup Instructions
 Clone the repository
